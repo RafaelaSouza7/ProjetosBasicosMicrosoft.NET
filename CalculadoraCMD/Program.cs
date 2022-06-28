@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculadoraCompletaCMD
+namespace CalculadoraCMD
 {
     internal class Program
     {
-        enum Menu { Soma = 1, Subtracao, Multiplicacao, Divisao, Potencia, Raiz, Sair}
+        enum Menu { Soma = 1, Subtracao, Multiplicacao, Divisao, Potencia, Raiz, Sair }
         static void Main(string[] args)
         {
             Menu opcaoSelecionada;
@@ -46,7 +46,7 @@ namespace CalculadoraCompletaCMD
                         calcularRaiz();
                         break;
 
-                     default:
+                    default:
                         Console.WriteLine("Opção inválida");
                         break;
                 }
@@ -70,9 +70,9 @@ namespace CalculadoraCompletaCMD
                 numeros.Add(numeroDigitado);
             }
 
-            Console.WriteLine($"A soma dos números digitados é igual a { numeros.Sum()}");
+            Console.WriteLine($"A soma dos números digitados é igual a {numeros.Sum()}");
             Console.ReadLine();
-            
+
         }
 
         static void Subtrair()
@@ -117,7 +117,7 @@ namespace CalculadoraCompletaCMD
             Console.WriteLine($"Digite a base: ");
             int a = int.Parse(Console.ReadLine());
 
-            if ( a != 0)
+            if (a != 0)
             {
                 Console.WriteLine($"Digite o expoente: ");
                 int b = int.Parse(Console.ReadLine());
@@ -126,7 +126,9 @@ namespace CalculadoraCompletaCMD
                 Console.WriteLine($"O resultado da potência é igual a {resultado}");
                 Console.ReadLine();
 
-            } else {
+            }
+            else
+            {
                 Console.WriteLine("Não é possível calcular a potência de uma base igual a 0");
             }
         }
@@ -140,5 +142,4 @@ namespace CalculadoraCompletaCMD
             Console.ReadLine();
         }
     }
-
 }

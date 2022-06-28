@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CursoUdemy.NET")]
+[assembly: AssemblyTitle("CalculadoraCMD")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CursoUdemy.NET")]
+[assembly: AssemblyProduct("CalculadoraCMD")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("00697894-54a9-445a-838a-c7ccc7194ca5")]
+[assembly: Guid("6789769f-b359-4a17-b479-073b8126f883")]
 
 // Version information for an assembly consists of the following four values:
 //

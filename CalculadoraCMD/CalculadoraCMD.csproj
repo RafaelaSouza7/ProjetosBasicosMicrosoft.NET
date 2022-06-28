@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00697894-54A9-445A-838A-C7CCC7194CA5}</ProjectGuid>
+    <ProjectGuid>{6789769F-B359-4A17-B479-073B8126F883}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CursoUdemy.NET</RootNamespace>
-    <AssemblyName>CursoUdemy.NET</AssemblyName>
+    <RootNamespace>CalculadoraCMD</RootNamespace>
+    <AssemblyName>CalculadoraCMD</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
