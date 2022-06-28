@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoUdemy.NET
+namespace CalculadoraCompletaCMD
 {
     internal class Program
     {
