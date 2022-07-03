@@ -22,6 +22,7 @@ namespace GestorDeClientesCMD
         public enum Menu { Listagem = 1, Adicionar, Excluir, Sair }
 
         public static Menu opcaoMenu;
+
         static void Main(string[] args)
         {
             CarregarInformacoesDoArquivo();
