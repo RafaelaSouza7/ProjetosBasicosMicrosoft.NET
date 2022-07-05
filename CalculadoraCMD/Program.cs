@@ -50,7 +50,6 @@ namespace CalculadoraCMD
                         Console.WriteLine("Opção inválida");
                         break;
                 }
-
                 Console.Clear();
             } while (opcaoSelecionada != Menu.Sair);
         }
@@ -72,7 +71,6 @@ namespace CalculadoraCMD
 
             Console.WriteLine($"A soma dos números digitados é igual a {numeros.Sum()}");
             Console.ReadLine();
-
         }
 
         static void Subtrair()
@@ -100,6 +98,7 @@ namespace CalculadoraCMD
             Console.WriteLine($"A multiplicação dos números digitados é igual a {resultado}");
             Console.ReadLine();
         }
+
         static void Dividir()
         {
             Console.WriteLine($"Digite o 1º número: ");
@@ -112,6 +111,7 @@ namespace CalculadoraCMD
             Console.WriteLine($"A divisão dos números digitados é igual a {resultado}");
             Console.ReadLine();
         }
+
         static void calcularPotencia()
         {
             Console.WriteLine($"Digite a base: ");
@@ -125,13 +125,13 @@ namespace CalculadoraCMD
                 double resultado = Math.Pow(a, b);
                 Console.WriteLine($"O resultado da potência é igual a {resultado}");
                 Console.ReadLine();
-
-            }
+            } 
             else
             {
                 Console.WriteLine("Não é possível calcular a potência de uma base igual a 0");
             }
         }
+
         static void calcularRaiz()
         {
             Console.WriteLine($"Digite o radicando: ");
