@@ -21,12 +21,26 @@ namespace GerenciadorDeEstoqueCMD
 
         public void AdicionarEntrada()
         {
-            
+            Console.WriteLine("Produto digital. Não é possível registrar uma entrada.\n");
+            Console.WriteLine("Aperte ENTER para voltar ao menu inicial.");
+            Console.ReadLine();
+            Console.Clear();
         }
 
         public void AdicionarSaida()
         {
-            
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine(            $"Registrar saída - Ebook {nome}");
+            Console.WriteLine("---------------------------------------------------------\n");
+            Console.Write($"Digite a quantidade de vendas que deseja registrar: ");
+            int qtdeEntrada = int.Parse(Console.ReadLine());
+
+            vendas += qtdeEntrada;
+
+            Console.WriteLine($"\nSaída do Ebook \"{nome}\" registrada com sucesso!\n");
+            Console.WriteLine("Aperte ENTER para voltar ao menu inicial.");
+            Console.ReadLine();
+            Console.Clear();
         }
 
         public void Exibir()

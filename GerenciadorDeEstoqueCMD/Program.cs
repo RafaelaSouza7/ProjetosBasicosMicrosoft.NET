@@ -45,9 +45,11 @@ namespace GerenciadorDeEstoqueCMD
                         break;
 
                     case Menu.Entrada:
+                        RegistrarEntrada();
                         break;
 
                     case Menu.Saida:
+                        RegistrarSaida();
                         break;
 
                     default:
@@ -103,6 +105,24 @@ namespace GerenciadorDeEstoqueCMD
             Console.WriteLine("-----------------------------------");
             Console.WriteLine("       Exclusão de produto");
             Console.WriteLine("-----------------------------------");
+        }
+
+        static void ListarParaRegistrar()
+        {
+            Console.Clear();
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("       Produtos cadastrados");
+            Console.WriteLine("-----------------------------------\n");
+
+            int id = 0;
+
+            foreach (IEstoque produto in produtos)
+            {
+                Console.WriteLine($"ID do produto: {id}");
+                produto.Exibir();
+                Console.WriteLine("-----------------------------------");
+                id++;
+            }
         }
 
         static void Cadastar()
@@ -209,7 +229,7 @@ namespace GerenciadorDeEstoqueCMD
             Console.Write("\nDigite o ID do produto que deseja excluir: ");
             int idEscolhido = int.Parse(Console.ReadLine());
 
-            if (idEscolhido > 0 && idEscolhido < produtos.Count)
+            if (idEscolhido >= 0 && idEscolhido < produtos.Count)
             {
                 produtos.RemoveAt(idEscolhido);
                 SalvarInformacoesNoArquivo();
@@ -217,6 +237,50 @@ namespace GerenciadorDeEstoqueCMD
                 Console.WriteLine("Aperte ENTER para voltar ao menu inicial.");
                 Console.ReadLine();
                 Console.Clear();
+            }
+            else
+            {
+                Console.WriteLine("\nID inexistente! Digite um ID válido.");
+                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial.");
+                Console.ReadLine();
+                Console.Clear();
+            }
+        }
+
+        static void RegistrarEntrada()
+        {
+            ListarParaRegistrar();
+
+            Console.Write("\nDigite o ID do produto que deseja registrar entrada: ");
+            int idEscolhido = int.Parse(Console.ReadLine());
+
+            if (idEscolhido >= 0 && idEscolhido < produtos.Count)
+            {
+                produtos[idEscolhido].AdicionarEntrada();
+                SalvarInformacoesNoArquivo();
+
+            }
+            else
+            {
+                Console.WriteLine("\nID inexistente! Digite um ID válido.");
+                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial.");
+                Console.ReadLine();
+                Console.Clear();
+            }
+        }
+
+        static void RegistrarSaida()
+        {
+            ListarParaRegistrar();
+
+            Console.Write("\nDigite o ID do produto que deseja registrar saída: ");
+            int idEscolhido = int.Parse(Console.ReadLine());
+
+            if (idEscolhido >= 0 && idEscolhido < produtos.Count)
+            {
+                produtos[idEscolhido].AdicionarSaida();
+                SalvarInformacoesNoArquivo();
+
             }
             else
             {
