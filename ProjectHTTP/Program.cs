@@ -12,10 +12,8 @@ namespace ProjectHTTP
     internal class Program
     {
         enum Menu { FetchAll = 1, FetchOne, Exit }
-
         static void Main(string[] args)
         {
-
             Menu opcaoSelecionada;
 
             do
@@ -46,7 +44,6 @@ namespace ProjectHTTP
             } while (opcaoSelecionada != Menu.Exit);
             Console.Clear();
         }
-
         static void RequestAll()
         {
             var request = WebRequest.Create("https://jsonplaceholder.typicode.com/todos/");
@@ -71,17 +68,16 @@ namespace ProjectHTTP
                 stream.Close();
                 response.Close();
 
-                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial.");
+                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial");
                 Console.ReadLine();
                 Console.Clear();
             }
         }
-
         static void RequestOne()
         {
             Console.Write("Digite o ID da tarefa que deseja buscar: ");
-            int idChosen = int.Parse(Console.ReadLine())
-                ;
+            int idChosen = int.Parse(Console.ReadLine());
+
             var request = WebRequest.Create($"https://jsonplaceholder.typicode.com/todos/{idChosen}");
             request.Method = "GET";
             var response = request.GetResponse();
@@ -101,11 +97,10 @@ namespace ProjectHTTP
                 stream.Close();
                 response.Close();
 
-                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial.");
+                Console.WriteLine("\nAperte ENTER para voltar ao menu inicial");
                 Console.ReadLine();
                 Console.Clear();
             }
-
         }
     }
 }
