@@ -56,7 +56,6 @@ namespace GerenciadorDeEstoqueCMD
                         Console.WriteLine("Opção inválida");
                         break;
                 }
-
             
             } while(opcaoSelecionada != Menu.Sair);
             Console.Clear();
