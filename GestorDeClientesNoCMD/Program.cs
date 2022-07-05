@@ -147,7 +147,5 @@ namespace GestorDeClientesCMD
 
             stream.Close();
         }
-
-
     }
 }
