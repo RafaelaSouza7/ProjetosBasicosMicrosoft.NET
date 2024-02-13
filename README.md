@@ -1,2 +1,6 @@
-# ProjetosBasicosMicrosoft.NET
-Repositório criado para armazenar os projetos desenvolvidos no curso de C# (nível iniciante) da Udemy - Guia do Programador / Professor Victor Lima
+# Projetos básicos Microsoft.NET
+
+**Curso:** C# (nível iniciante) <br>
+**Plataforma:** Udemy <br>
+**Instrutor:** Professor Victor Lima
+
